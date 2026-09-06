@@ -9,14 +9,14 @@ importers:
   .:
     devDependencies:
       '@types/chrome':
-        specifier: ^0.0.280
-        version: 0.0.280
+        specifier: ^0.2.0
+        version: 0.2.8
       typescript:
         specifier: 5.6.3
         version: 5.6.3
       wxt:
         specifier: ^0.19.13
-        version: 0.19.27(@types/node@22.13.1)(rollup@4.34.6)
+        version: 0.19.27(@types/node@22.13.1)(rollup@4.34.6)(supports-color@7.2.0)
 
 packages:
 
@@ -500,6 +500,9 @@ packages:
 
   '@types/chrome@0.0.280':
     resolution: {integrity: sha512-AotSmZrL9bcZDDmSI1D9dE7PGbhOur5L0cKxXd7IqbVizQWCY4gcvupPUVsQ4FfDj3V2tt/iOpomT9EY0s+w1g==}
+
+  '@types/chrome@0.2.8':
+    resolution: {integrity: sha512-dznDYMiJUyuc7b+78PxnWhaGOonmbX/OmcWu7NE42sg/yTLJMYnJ7Uah40SLPNFiCh8reqcthk7vOva2+MSvzw==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -2233,13 +2236,13 @@ snapshots:
 
   '@devicefarmer/adbkit-monkey@1.2.1': {}
 
-  '@devicefarmer/adbkit@3.2.6':
+  '@devicefarmer/adbkit@3.2.6(supports-color@7.2.0)':
     dependencies:
       '@devicefarmer/adbkit-logcat': 2.1.3
       '@devicefarmer/adbkit-monkey': 1.2.1
       bluebird: 3.7.2
       commander: 9.5.0
-      debug: 4.3.7
+      debug: 4.3.7(supports-color@7.2.0)
       node-forge: 1.3.1
       split: 1.0.1
     transitivePeerDependencies:
@@ -2491,6 +2494,11 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
+  '@types/chrome@0.2.8':
+    dependencies:
+      '@types/filesystem': 0.0.36
+      '@types/har-format': 1.2.16
+
   '@types/estree@1.0.6': {}
 
   '@types/filesystem@0.0.36':
@@ -2696,12 +2704,12 @@ snapshots:
 
   chownr@2.0.0: {}
 
-  chrome-launcher@1.1.0:
+  chrome-launcher@1.1.0(supports-color@7.2.0):
     dependencies:
       '@types/node': 22.13.1
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
-      lighthouse-logger: 2.0.1
+      lighthouse-logger: 2.0.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2819,17 +2827,23 @@ snapshots:
 
   debounce@1.2.1: {}
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@7.2.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@4.3.7:
+  debug@4.3.7(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@4.4.0:
+  debug@4.4.0(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   decompress-response@6.0.0:
     dependencies:
@@ -3033,9 +3047,9 @@ snapshots:
       signal-exit: 4.1.0
       strip-final-newline: 3.0.0
 
-  extract-zip@2.0.1:
+  extract-zip@2.0.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@7.2.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -3356,9 +3370,9 @@ snapshots:
     dependencies:
       immediate: 3.0.6
 
-  lighthouse-logger@2.0.1:
+  lighthouse-logger@2.0.1(supports-color@7.2.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@7.2.0)
       marky: 1.2.5
     transitivePeerDependencies:
       - supports-color
@@ -3716,13 +3730,13 @@ snapshots:
 
   proto-list@1.2.4: {}
 
-  publish-browser-extension@3.0.0:
+  publish-browser-extension@3.0.0(supports-color@7.2.0):
     dependencies:
       cac: 6.7.14
       cli-highlight: 2.1.11
       consola: 3.4.0
       dotenv: 16.4.7
-      extract-zip: 2.0.1
+      extract-zip: 2.0.1(supports-color@7.2.0)
       formdata-node: 6.0.3
       listr2: 8.2.5
       lodash.camelcase: 4.3.0
@@ -4087,10 +4101,10 @@ snapshots:
 
   uuid@8.3.2: {}
 
-  vite-node@3.0.5(@types/node@22.13.1)(jiti@1.21.7):
+  vite-node@3.0.5(@types/node@22.13.1)(jiti@1.21.7)(supports-color@7.2.0):
     dependencies:
       cac: 6.7.14
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@7.2.0)
       es-module-lexer: 1.6.0
       pathe: 2.0.3
       vite: 6.0.8(@types/node@22.13.1)(jiti@1.21.7)
@@ -4127,12 +4141,12 @@ snapshots:
     dependencies:
       defaults: 1.0.4
 
-  web-ext-run@0.2.2:
+  web-ext-run@0.2.2(supports-color@7.2.0):
     dependencies:
       '@babel/runtime': 7.24.7
-      '@devicefarmer/adbkit': 3.2.6
+      '@devicefarmer/adbkit': 3.2.6(supports-color@7.2.0)
       bunyan: 1.8.15
-      chrome-launcher: 1.1.0
+      chrome-launcher: 1.1.0(supports-color@7.2.0)
       debounce: 1.2.1
       es6-error: 4.1.1
       firefox-profile: 4.6.0
@@ -4208,7 +4222,7 @@ snapshots:
 
   ws@8.18.0: {}
 
-  wxt@0.19.27(@types/node@22.13.1)(rollup@4.34.6):
+  wxt@0.19.27(@types/node@22.13.1)(rollup@4.34.6)(supports-color@7.2.0):
     dependencies:
       '@1natsu/wait-element': 4.1.2
       '@aklinker1/rollup-plugin-visualizer': 5.12.0(rollup@4.34.6)
@@ -4249,12 +4263,12 @@ snapshots:
       perfect-debounce: 1.0.0
       picocolors: 1.1.1
       prompts: 2.4.2
-      publish-browser-extension: 3.0.0
+      publish-browser-extension: 3.0.0(supports-color@7.2.0)
       scule: 1.3.0
       unimport: 3.14.6(rollup@4.34.6)
       vite: 6.0.8(@types/node@22.13.1)(jiti@1.21.7)
-      vite-node: 3.0.5(@types/node@22.13.1)(jiti@1.21.7)
-      web-ext-run: 0.2.2
+      vite-node: 3.0.5(@types/node@22.13.1)(jiti@1.21.7)(supports-color@7.2.0)
+      web-ext-run: 0.2.2(supports-color@7.2.0)
       webextension-polyfill: 0.12.0
     transitivePeerDependencies:
       - '@types/node'
